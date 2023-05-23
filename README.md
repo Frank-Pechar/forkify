@@ -1,4 +1,4 @@
-# forkify Projet - Recipe Application
+# forkify Project - Recipe Application
 
 Desription of App Functionality:
 
@@ -9,3 +9,11 @@ App can be run from:
 ARCHITECTURE
 
 MVC - Model/View/Controller
+
+• This App Showcases Javascript Features Such As:
+• MVC Architecture
+• Recipe Database API - Query & Update
+• DOM Updating Algorithm
+• Pagination of Search Results
+• Bookmarks to Local Storage
+• Async/Await
