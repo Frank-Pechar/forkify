@@ -29,3 +29,5 @@ App can be run from: https://frank-pechar-js-forkify.netlify.app/
 - Retrieved Form Input using FormData() Method 
 - Converted Input Data Array to Object using Object.fromEntries() Method
 - Converted Object to Array using Object.entries() Method
+- Used Data Attributes for Dyamically Updating for Pagination of Search Results, and Updating Recipe Servings
+- Usage of load and hashchange events to render recipe detail also used window.history.pushState() to change URL without reloading page
