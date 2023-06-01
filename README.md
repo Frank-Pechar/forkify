@@ -1,5 +1,5 @@
 # Forkify Project - Recipe Application
-# Desription of App Functionality, Features, and Methods:
+## Desription of App Functionality, Features, and Methods:
 
 Javascript project completed from the Udemy - The Complete Javascript Course 2023: From Zero to Expert by Jonas Schmedtmann
 
