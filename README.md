@@ -23,6 +23,9 @@ App can be run from: https://frank-pechar-js-forkify.netlify.app/
 - Protected Fields and Methods for Class Inheritance
 - Event Delegation for Elements Not Yet Created in DOM
 - Display Spinner Animation for Asynchronous Fetch Downloads and Uploads
+- Update Routine (render only changed DOM Text and Attributes)
+- Update - Created Document Fragment - Used document.createRange().createContextualFragment() 
+- Update - For Comparisons - Used isEqualNode() and nodeValue
 - Retrieved Form Input using FormData() Method 
 - Converted Input Data Array to Object using Object.fromEntries() Method
 - Converted Object to Array using Object.entries() Method
