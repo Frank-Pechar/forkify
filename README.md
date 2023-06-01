@@ -1,4 +1,4 @@
-# forkify Project - Recipe Application
+# Forkify Project - Recipe Application
 
 Desription of App Functionality:
 
@@ -17,3 +17,8 @@ MVC - Model/View/Controller wih Publisher/Subscriber Pattern
 • Pagination of Search Results
 • Create abd List Bookmarks to/from Local Storage
 • Async/Await Handling of Promises
+
+• Coding Methods and Features Used:
+
+• Parcel for build bundling, and Babel for transpiling and core.js/stable for polyfilling
+
