@@ -1,8 +1,8 @@
 # Forkify Project - Recipe Application
 # JavaScript Project
-## Desription of App Functionality, Features, and Methods:
+## Desription of App Functionality, Features, and Methods
 
-Javascript project completed from the Udemy - The Complete Javascript Course 2023: From Zero to Expert by Jonas Schmedtmann
+Javascript coding project I completed the Udemy - The Complete Javascript Course 2023: From Zero to Expert by Jonas Schmedtmann. After coding this landing page through the course I then added additional features and modifications.
 
 App can be run from: https://frank-pechar-js-forkify.netlify.app/
 
