@@ -3,6 +3,7 @@ This model.js module handles:
     1) State Data for the application
     2) HTTP Requests
     3) Business Logic
+    4) init() function for loading bookmarks if available in local storage
 
 Exports are:
   state object - main state object for application
@@ -12,7 +13,7 @@ Exports are:
   updateServings - updates number of servings for recipe
   addBookmark - adds bookmark
   deleteBookmark - deletes bookmark
-  uploadRecipe - uploads new uer recipe
+  uploadRecipe - uploads new user recipe
 */
 import { async } from 'regenerator-runtime';
 import { API_URL, RES_PER_PAGE, KEY } from './config.js';
@@ -65,6 +66,7 @@ export const loadRecipe = async function (id) {
     const data = await AJAX(`${API_URL}${id}?key=${KEY}`);
     state.recipe = createRecipeObject(data);
 
+    // determine if recipe is bookmarked
     if (state.bookmarks.some(bookmark => bookmark.id === id))
       state.recipe.bookmarked = true;
     else state.recipe.bookmarked = false;
@@ -80,6 +82,7 @@ export const loadSearchResults = async function (query) {
     state.search.query = query;
     const data = await AJAX(`${API_URL}?search=${query}&key=${KEY}`);
 
+    // create array of recipe objects from the search results
     state.search.results = data.data.recipes.map(rec => {
       return {
         id: rec.id,
@@ -103,10 +106,11 @@ export const getSearchResultsPage = function (page = state.search.page) {
   const start = (page - 1) * state.search.resultsPerPage;
   const end = page * state.search.resultsPerPage;
 
+  // return range of results for rendering
   return state.search.results.slice(start, end);
 };
 
-// update servings
+// update servings and ingredient quantities
 export const updateServings = function (newServings) {
   state.recipe.ingredients.forEach(ing => {
     ing.quantity = (ing.quantity * newServings) / state.recipe.servings;
@@ -136,7 +140,7 @@ export const deleteBookmark = function (id) {
 };
 
 // upload new user created recipe
-export const uploadrecipe = async function (newRecipe) {
+export const uploadRecipe = async function (newRecipe) {
   try {
     // retrieve, validate and format ingredients into array
     const ingredients = Object.entries(newRecipe)
@@ -171,7 +175,7 @@ export const uploadrecipe = async function (newRecipe) {
   }
 };
 
-// local storage for bookmarks
+// get bookmarks from local storage
 const init = function () {
   const storage = localStorage.getItem('bookmarks');
   // if there are bookmarks then copy to state bookmarks array
