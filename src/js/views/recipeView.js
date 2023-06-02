@@ -14,14 +14,16 @@ class RecipeView extends View {
   _errorMessage = 'We could not find that recipe. Please try another one !';
   _message = '';
 
-  // add window events listeners for loading recipe
+  // add window events listeners to execute controller.controlRecipes
+  // the hash value in the href attribute for both the - recipe search results - and the bookmark list - are used to trigger hashchange event and load the particular recipe on the page
   addHandlerRender(handler) {
     ['hashchange', 'load'].forEach(ev => window.addEventListener(ev, handler));
   }
 
   // event handler for updating servings
+  // handler = controller.controlServings()
   addHandlerUpdateServings(handler) {
-    // handler = controller.controlServings()
+    // _parentElement === body > div.container > div.recipe
     this._parentElement.addEventListener('click', function (e) {
       const btn = e.target.closest('.btn--update-servings');
       if (!btn) return;
@@ -31,8 +33,9 @@ class RecipeView extends View {
   }
 
   // event handler for adding a bookmark
+  // handler = controller.controlAddBookmark()
   addHandlerAddBookmark(handler) {
-    // handler = controller.controller.addBookmark()
+    // _parentElement === body > div.container > div.recipe
     this._parentElement.addEventListener('click', function (e) {
       const btn = e.target.closest('.btn--bookmark');
       if (!btn) return;
@@ -40,7 +43,7 @@ class RecipeView extends View {
     });
   }
 
-  // markup for recipe detail.
+  // create html markup for recipe detail
   _generateMarkup() {
     return `
     <figure class="recipe__fig">
@@ -106,7 +109,7 @@ class RecipeView extends View {
         <div class="recipe__ingredients">
           <h2 class="heading--2">Recipe ingredients</h2>
           <ul class="recipe__ingredient-list">
-            ${/* loop for all ingredients*/ ''}
+            ${/* loop for markup for all ingredients*/ ''}
             ${this._data.ingredients
               .map(this._generateMarkupIngredient)
               .join('')}
@@ -138,7 +141,7 @@ class RecipeView extends View {
   `;
   }
 
-  // callback function for each ingredient
+  // callback function to create html markup for each ingredient
   _generateMarkupIngredient(ing) {
     return `
     <li class="recipe__ingredient">

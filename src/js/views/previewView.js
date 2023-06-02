@@ -15,6 +15,7 @@ class PreviewView extends View {
     const id = window.location.hash.slice(1);
 
     // markup for search results and bookmarks
+    // href = url hash for each recipe in the results
     return `
 			<li class="preview">
 				<a class="preview__link ${
@@ -38,5 +39,5 @@ class PreviewView extends View {
   }
 }
 
-// creaate ResultsView instance
+// create ResultsView instance
 export default new PreviewView();

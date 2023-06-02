@@ -8,6 +8,7 @@ import View from './view.js';
 
 class PaginationView extends View {
   // inherit View Class
+  // _parentElement === body > div.container > div.search-results > div.pagination
   _parentElement = document.querySelector('.pagination');
 
   // event handling for next or previous buttons for search results

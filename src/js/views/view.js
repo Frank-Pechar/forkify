@@ -11,6 +11,7 @@ export default class View {
   // Render markup from specific view module
 
   render(data, render = true) {
+    // return - if no data or if data isArray and empty
     if (!data || (Array.isArray(data) && data.length === 0))
       return this.renderError();
 
@@ -21,11 +22,11 @@ export default class View {
     if (!render) return markup;
 
     // insert markup into the DOM
-    this._clear();
+    this.#clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
-  // this update function, for enhanced performance, will compare old DOM elements with new DOM elements in order to render only the changed text nodes
+  // this update function, for enhanced performance, will compare old DOM elements with new DOM elements in order to render only the changed text nodes. This function is mostly used for updating recipe servings and corresponding ingredients quantities for the particular recipe being displayed. Also use for bookmark flag update for search results
   update(data) {
     // format new and current DOM nodes for change comparison
     this._data = data;
@@ -51,8 +52,8 @@ export default class View {
       }
       // replace changed attributes (for servings counter)
       if (!newEl.isEqualNode(curEl)) {
-        console.log('current attributes - ', curEl.attributes);
-        console.log('new attributes     - ', newEl.attributes);
+        // console.log('current attributes - ', curEl.attributes);
+        // console.log('new attributes     - ', newEl.attributes);
         Array.from(newEl.attributes).forEach(attr =>
           curEl.setAttribute(attr.name, attr.value)
         );
@@ -60,10 +61,12 @@ export default class View {
     });
   }
 
-  _clear() {
+  // clear results ul element in DOM
+  #clear() {
     this._parentElement.innerHTML = '';
   }
 
+  // render fetch spinner
   renderSpinner() {
     const markup = `
     <div class="spinner">
@@ -72,7 +75,7 @@ export default class View {
       </svg>
     </div> -->
     `;
-    this._clear();
+    this.#clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
@@ -87,7 +90,7 @@ export default class View {
             <p>${message}</p>
       </div>
     `;
-    this._clear();
+    this.#clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
@@ -102,7 +105,7 @@ export default class View {
             <p>${message}</p>
       </div>
     `;
-    this._clear();
+    this.#clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 }

@@ -9,17 +9,18 @@ class SearchView {
   // get user search query input
   getQuery() {
     const query = this._parentEl.querySelector('.search__field').value;
-    this._clearInput();
+    this.#clearInput();
     return query;
   }
 
-  _clearInput() {
+  #clearInput() {
     this._parentEl.querySelector('.search__field').value = '';
   }
 
   // event handling for recipe search query
   addHandlerSearch(handler) {
     // handler = controller.controlSearchResults
+    // _parentEl === body > div.container > header > form
     this._parentEl.addEventListener('submit', function (e) {
       e.preventDefault();
       handler();

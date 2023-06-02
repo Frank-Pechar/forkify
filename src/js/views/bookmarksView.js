@@ -13,6 +13,7 @@ class BookMarksView extends View {
   _errorMessage = 'No bookmarks yet. Find a nice recipe and bookmark it ;)';
   _message = '';
 
+  // on page load render bookmarks if available
   addHandlerRender(handler) {
     // handler = controller.controlBookmarks
     window.addEventListener('load', handler);
@@ -26,5 +27,5 @@ class BookMarksView extends View {
   }
 }
 
-// creaate ResultsView instance
+// create ResultsView instance
 export default new BookMarksView();

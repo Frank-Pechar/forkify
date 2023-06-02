@@ -14,7 +14,7 @@ class ResultsView extends View {
   _message = '';
 
   _generateMarkup() {
-    // loop through all search results and generate html
+    // loop through recipe search results and generate html
     return this._data.map(result => previewView.render(result, false)).join('');
   }
 }
