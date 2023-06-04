@@ -2,7 +2,7 @@
 # JavaScript Project
 ## Desription of App Functionality, Features, and Methods
 
-Javascript coding project I completed the Udemy - The Complete Javascript Course 2023: From Zero to Expert by Jonas Schmedtmann. After coding this landing page through the course I then added additional features and modifications.
+Javascript coding project I completed the Udemy - The Complete Javascript Course 2023: From Zero to Expert by Jonas Schmedtmann. After coding this landing page through the course I then added additional modifications and extensive commenting of code for educational purposes.
 
 App can be run from: https://frank-pechar-js-forkify.netlify.app/
 
