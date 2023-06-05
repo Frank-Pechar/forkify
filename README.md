@@ -15,7 +15,7 @@ App can be run from: https://frank-pechar-js-forkify.netlify.app/
 - Pagination of Search Results
 - Create and List Bookmarks to and from Local Storage
 - Async/Await Handling of Promises
-- try / catch, and re-throwing errors 
+- Try / catch, and re-throwing errors 
 
 ## Coding Methods and Features Used:
 
