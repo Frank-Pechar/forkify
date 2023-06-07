@@ -10,6 +10,7 @@ App can be run from: https://frank-pechar-js-forkify.netlify.app/
 
 - ES6 Modules
 - MVC - Model/View/Controller Architecture wih Publisher/Subscriber Pattern
+- Parcel for build bundling (Babel for transpiling, core.js/stable for polyfilling)
 - Recipe Database API - Query & Update
 - DOM Updating Algorithm - Only changed elements are re-rendered
 - Pagination of Search Results
@@ -19,7 +20,6 @@ App can be run from: https://frank-pechar-js-forkify.netlify.app/
 
 ## Coding Methods and Features Used:
 
-- Parcel for build bundling (Babel for transpiling, core.js/stable for polyfilling)
 - Base and Sub Classes and Static Methods
 - Private Fields and Methods
 - Protected Fields and Methods for Class Inheritance
