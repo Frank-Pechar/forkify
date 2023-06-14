@@ -1,6 +1,6 @@
 # Forkify Project - Recipe Application
 # JavaScript Project
-## Desription of App Functionality, Features, and Methods
+## Description of App Functionality, Features, and Methods
 
 Javascript coding project I completed from Udemy - The Complete Javascript Course 2023: From Zero to Expert by Jonas Schmedtmann. After coding this project through the course I then added additional modifications and extensive commenting of code for educational purposes.
 
