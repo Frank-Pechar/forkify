@@ -1,12 +1,34 @@
-# Forkify Project - Recipe Application
-# JavaScript Project
+# Recipe App
+## JavaScript Project
 ## Description of App Functionality, Features, and Methods
 
-Javascript coding project I completed from Udemy - The Complete Javascript Course 2023: From Zero to Expert by Jonas Schmedtmann. After coding this project through the course I then added additional modifications and extensive commenting of code for educational purposes.
+Javascript coding project I completed from Udemy - The Complete Javascript Course 2023: From Zero to Expert by Jonas Schmedtmann. After coding this project through the course I then added additional modifications and comments to the code for educational purposes.
 
 App can be run from: https://frank-pechar-js-forkify.netlify.app/
 
-## This App Uses Javascript Features Such As:
+## App Functionality
+
+Search Recipes
+- Enter keyword(s) in the search field to display a list of recipes, e.g. “pizza”, “pasta”, “onions”, etc.
+- View page(s) of results for various recipes
+
+View a Recipe
+- Select a recipe from results list to display recipe ingredients
+- Change number of servings as needed will change quantities of ingredients
+- Click &lt;DIRECTIONS&gt; Button to go to to recipe origination website for further cooking instructions
+
+Add Your Own Recipe
+- Click &lt;ADD RECIPE&gt; Button
+- Enter recipe input and click &lt;UPLOAD&gt; Button
+- Recipe will be automatically Bookmarked
+
+Bookmark Favorite Recipes
+- Click &lt;Bookmark&gt; Button
+
+View List of Bookmarks
+- Hover mouse over &lt;BOOKMARKS&gt; Button
+
+## Javascript Features and Methods Used
 
 - ES6 Modules
 - MVC - Model/View/Controller Architecture wih Publisher/Subscriber Pattern
