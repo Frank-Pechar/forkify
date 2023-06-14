@@ -6,6 +6,10 @@ Javascript coding project I completed from Udemy - The Complete Javascript Cours
 
 App can be run from: https://frank-pechar-js-forkify.netlify.app/
 
+## App Description
+
+This App will display recipes found on the internet that have been collected into a central database. Using the database API, a list of recipe search results can be retrieved by entering search keywords. A recipe can then be selected from the list in order to display recipe details with ingredients, cooking time and a link to the web site that originally hosted the recipe. Favorite recipes can be bookmarked for future reference. Recipes can also be input and uploaded to the central API database. Entered recipes will automatically be bookmarked.
+
 ## App Functionality
 
 Search Recipes
