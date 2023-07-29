@@ -27,7 +27,7 @@ const recipe = document.querySelector('.recipe');
 
 // if the device screen is smaller size - display recipe details section only
 let smallScreen = false;
-if (window.matchMedia('(max-width: 500px)').matches) {
+if (window.matchMedia('(max-width: 900px)').matches) {
   smallScreen = true;
   searchResults.classList.add('hidden');
   recipe.style.gridColumn = '1 / 3';
