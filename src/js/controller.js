@@ -22,6 +22,17 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import { async } from 'regenerator-runtime';
 
+const searchResults = document.querySelector('.search-results');
+const recipe = document.querySelector('.recipe');
+
+// if the device screen is smaller size - display recipe details section only
+let smallScreen = false;
+if (window.matchMedia('(max-width: 500px)').matches) {
+  smallScreen = true;
+  searchResults.classList.add('hidden');
+  recipe.style.gridColumn = '1 / 3';
+}
+
 // controlRecipes - executed from recipeView.addHandlerRender 'hashchange' and 'load' event listeners
 const controlRecipes = async function () {
   try {
@@ -49,6 +60,13 @@ const controlRecipes = async function () {
     // render recipe
     recipeView.render(model.state.recipe);
     //* paginationView.render(model.state.search);
+
+    // if the device screen is smaller size - display recipe details section only
+    if (smallScreen) {
+      searchResults.classList.add('hidden');
+      recipe.classList.remove('hidden');
+      recipe.style.gridColumn = '1 / 3';
+    }
   } catch (err) {
     recipeView.renderError();
     console.error(err);
@@ -71,6 +89,13 @@ const controlSearchResults = async function () {
     resultsView.render(model.getSearchResultsPage());
     // render initial pagination buttons
     paginationView.render(model.state.search);
+
+    // if the device screen is smaller size - display search results section only
+    if (smallScreen) {
+      searchResults.classList.remove('hidden');
+      recipe.classList.add('hidden');
+      searchResults.style.gridColumn = '1 / 3';
+    }
   } catch (err) {}
 };
 
