@@ -41,7 +41,7 @@ body {
   width: 100%;
   display: grid;
   grid-template-rows: 10rem minmax(100rem, auto);
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-areas:
     'head-area head-area'
     'list recipe';

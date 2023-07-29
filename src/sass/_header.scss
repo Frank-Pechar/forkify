@@ -5,6 +5,7 @@
   background-color: $color-grey-light-1;
   display: grid;
   grid-template-areas: 'header__logo search nav';
+  padding-top: 0.5rem;
 
   @media only screen and (max-width: 850px) {
     // grid-template-columns: repeat(autofit, minmax(min(20rem, 100%), 1fr));
@@ -16,12 +17,12 @@
 
   &__logo {
     grid-area: header__logo;
-    margin-left: 4rem;
+    margin-left: 3rem;
     height: 4.6rem;
 
-    @media only screen and (max-width: 380px) {
+    @media only screen and (max-width: 400px) {
       height: 4.2rem;
-      margin-left: 2rem;
+      margin-left: 1.5rem;
     }
   }
 }
@@ -121,7 +122,7 @@
     display: flex;
     align-items: center;
 
-    @media only screen and (max-width: 350px) {
+    @media only screen and (max-width: 400px) {
       padding: 0 0.5rem;
     }
 
