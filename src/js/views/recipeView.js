@@ -73,8 +73,8 @@ class RecipeView extends View {
               this._data.servings
             }</span>
             <span class="recipe__info-text">servings</span>
-
-            <div class="recipe__info-buttons">
+          </div>
+           <div class="recipe__info-buttons">
               <button class="btn--tiny btn--update-servings" data-update-to="${
                 this._data.servings - 1
               }">
@@ -89,9 +89,8 @@ class RecipeView extends View {
                   <use href="${icons}#icon-plus-circle"></use>
                 </svg>
               </button>
-            </div>
           </div>
-
+          <div class='user-bookmark-group'>
           <div class="recipe__user-generated ${this._data.key ? '' : 'hidden'}">
             <svg>
               <use href="${icons}#icon-user"></use>
@@ -104,6 +103,7 @@ class RecipeView extends View {
     }"></use>
             </svg>
           </button>
+        </div>
         </div>
 
         <div class="recipe__ingredients">
