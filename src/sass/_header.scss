@@ -1,24 +1,53 @@
 .header {
-  grid-area: head;
-  background-color: $color-grey-light-1;
-  display: flex;
-  align-items: center;
+  grid-area: head-area;
   justify-content: space-between;
+  align-items: center;
+  background-color: $color-grey-light-1;
+  display: grid;
+  grid-template-areas: 'header__logo search nav';
+
+  @media only screen and (max-width: 850px) {
+    // grid-template-columns: repeat(autofit, minmax(min(20rem, 100%), 1fr));
+    grid-template-areas:
+      'header__logo nav'
+      'search search';
+    justify-content: space-between;
+  }
 
   &__logo {
+    grid-area: header__logo;
     margin-left: 4rem;
     height: 4.6rem;
-    display: block;
+
+    @media only screen and (max-width: 380px) {
+      height: 4.2rem;
+      margin-left: 2rem;
+    }
   }
 }
 
 .search {
-  background-color: #fff;
-  border-radius: 10rem;
+  grid-area: search;
   display: flex;
+  transition: all 0.3s;
+  border-radius: 10rem;
   align-items: center;
   padding-left: 3rem;
-  transition: all 0.3s;
+  background-color: #fff;
+  margin-left: 4rem;
+
+  @media only screen and (max-width: 850px) {
+    grid-row: 2 / 3;
+    align-self: start;
+    justify-self: center;
+    width: 80vw;
+  }
+
+  @media only screen and (max-width: 450px) {
+    margin-left: 0;
+    justify-self: center;
+    width: 90vw;
+  }
 
   &:focus-within {
     transform: translateY(-2px);
@@ -30,8 +59,13 @@
     background: none;
     font-family: inherit;
     color: inherit;
-    font-size: 1.7rem;
-    width: 30rem;
+    font-size: 1.75rem;
+    width: 25rem;
+
+    @media only screen and (max-width: 850px) {
+      margin-left: 4rem;
+      width: 100%;
+    }
 
     &:focus {
       outline: none;
@@ -40,30 +74,32 @@
     &::placeholder {
       color: $color-grey-light-3;
     }
-
-    @media only screen and (max-width: $bp-medium) {
-      width: auto;
-
-      &::placeholder {
-        color: white;
-      }
-    }
   }
 
   &__btn {
     font-weight: 600;
     font-family: inherit;
+    padding: 1rem 2.5rem;
+
+    @media only screen and (max-width: 450px) {
+      padding: 0.75rem 2rem;
+    }
   }
 }
 
 .nav {
-  align-self: stretch;
+  grid-area: nav;
+  justify-self: end;
   margin-right: 2.5rem;
+
+  @media only screen and (max-width: 500px) {
+    justify-self: start;
+    margin-right: 1rem;
+  }
 
   &__list {
     list-style: none;
     display: flex;
-    height: 100%;
   }
 
   &__item {
@@ -80,17 +116,19 @@
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0 1.5rem;
+    padding: 0 2rem 0 1rem;
     transition: all 0.3s;
-
     display: flex;
     align-items: center;
+
+    @media only screen and (max-width: 350px) {
+      padding: 0 0.5rem;
+    }
 
     svg {
       height: 2.4rem;
       width: 2.4rem;
       fill: $color-primary;
-      margin-right: 0.7rem;
       transform: translateY(-1px);
     }
 
@@ -107,13 +145,11 @@
 .bookmarks {
   padding: 1rem 0;
   position: absolute;
-  // right: 0;
   right: -2.5rem;
   z-index: 10;
   width: 40rem;
   background-color: #fff;
   box-shadow: 0 0.8rem 5rem 2rem rgba($color-grey-dark-1, 0.1);
-
   visibility: hidden;
   opacity: 0;
   transition: all 0.5s 0.2s;
@@ -125,7 +161,6 @@
   &__field {
     cursor: pointer;
     padding: 0 4rem;
-
     display: flex;
     align-items: center;
     height: 100%;

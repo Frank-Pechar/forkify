@@ -25,7 +25,7 @@
 .btn {
   @extend %btn;
 
-  padding: 1.5rem 4rem;
+  padding: 1rem 4rem;
   font-size: 1.5rem;
   font-weight: 600;
 
@@ -97,7 +97,6 @@
   cursor: pointer;
   height: 4.5rem;
   width: 4.5rem;
-  // margin-left: auto;
   transition: all 0.2s;
 
   display: flex;
@@ -114,14 +113,13 @@
 
   svg {
     height: 2.5rem;
-    width: 2.5rem;
     fill: #fff;
   }
 }
 
 .btn--tiny {
-  height: 2rem;
-  width: 2rem;
+  height: 4rem;
+  width: 4rem;
   border: none;
   background: none;
   cursor: pointer;
@@ -148,7 +146,7 @@
   }
 
   &:not(:last-child) {
-    margin-right: 0.3rem;
+    margin-right: 2.5rem;
   }
 }
 
@@ -159,7 +157,6 @@
   text-transform: uppercase;
   margin-bottom: 2.5rem;
   text-align: center;
-  // transform: skewY(-3deg);
 }
 
 .link:link,

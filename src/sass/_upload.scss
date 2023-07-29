@@ -3,10 +3,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100rem;
+  width: min(95vw, 100rem);
   background-color: white;
   border-radius: 9px;
-
   padding: 5rem 6rem;
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.25);
   z-index: 1000;
@@ -42,12 +41,21 @@
   opacity: 0;
 }
 
+.upload__flex {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .upload {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 3rem;
 
   &__column {
+    min-width: 100px;
     display: grid;
     grid-template-columns: 1fr 2.8fr;
     align-items: center;
