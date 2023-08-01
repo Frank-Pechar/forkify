@@ -48,6 +48,7 @@ View List of Bookmarks
 - Protected Fields and Methods for Class Inheritance
 - Event Delegation for Elements Not Yet Created in DOM
 - Display Spinner Animation for Asynchronous Fetch Downloads and Uploads
+- Responsive Design Techniques 
 
 List of some methods and properties used:
 
