@@ -147,13 +147,21 @@ const controlAddRecipe = async function (newRecipe) {
     bookmarksView.render(model.state.bookmarks);
     // update url hash endpoint with new recipe id without reloading page
     window.history.pushState(null, '', `#${model.state.recipe.id}`);
+    // Reload page with new recipe after displaying success message
+    setTimeout(function () {
+      location.reload();
+    }, MODAL_CLOSE_SEC * 500);
     // close new recipe form
     setTimeout(function () {
       addRecipeView._toggleForm();
-    }, MODAL_CLOSE_SEC * 1000);
+    }, MODAL_CLOSE_SEC * 500);
   } catch (err) {
     console.error('💥', err);
     addRecipeView.renderError(err.message);
+    // Reload page after displaying error message
+    setTimeout(function () {
+      location.reload();
+    }, MODAL_CLOSE_SEC * 500);
   }
 };
 
