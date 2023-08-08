@@ -6,12 +6,13 @@
   width: min(95vw, 100rem);
   background-color: white;
   border-radius: 9px;
-  padding: 5rem 6rem;
+  padding: 5rem 1rem;
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.25);
   z-index: 1000;
   transition: all 0.5s;
   @media only screen and (min-width: 670px) {
     top: 30%;
+    padding: 5rem 6rem;
   }
 
   .btn--close-modal {
