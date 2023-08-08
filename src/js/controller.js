@@ -147,6 +147,8 @@ const controlAddRecipe = async function (newRecipe) {
     bookmarksView.render(model.state.bookmarks);
     // update url hash endpoint with new recipe id without reloading page
     window.history.pushState(null, '', `#${model.state.recipe.id}`);
+    // reset input values
+    document.getElementById('uploadForm').reset();
     // Close new recipe form and reload page with new recipe after displaying success message and scroll to top of page
     setTimeout(function () {
       addRecipeView._toggleForm();
