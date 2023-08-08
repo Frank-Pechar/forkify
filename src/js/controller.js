@@ -147,21 +147,20 @@ const controlAddRecipe = async function (newRecipe) {
     bookmarksView.render(model.state.bookmarks);
     // update url hash endpoint with new recipe id without reloading page
     window.history.pushState(null, '', `#${model.state.recipe.id}`);
-    // Reload page with new recipe after displaying success message
-    setTimeout(function () {
-      location.reload();
-    }, MODAL_CLOSE_SEC * 500);
-    // close new recipe form
+    // Close new recipe form and reload page with new recipe after displaying success message and scroll to top of page
     setTimeout(function () {
       addRecipeView._toggleForm();
-    }, MODAL_CLOSE_SEC * 500);
+      location.reload();
+    }, MODAL_CLOSE_SEC * 1000);
+    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
   } catch (err) {
     console.error('💥', err);
     addRecipeView.renderError(err.message);
-    // Reload page after displaying error message
+    // Reload page after displaying error message and scroll to top of page
     setTimeout(function () {
       location.reload();
-    }, MODAL_CLOSE_SEC * 500);
+    }, MODAL_CLOSE_SEC * 1500);
+    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
   }
 };
 
