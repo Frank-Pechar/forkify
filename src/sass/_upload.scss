@@ -10,9 +10,11 @@
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.25);
   z-index: 1000;
   transition: all 0.5s;
-  @media only screen and (min-width: 670px) {
+  @media only screen and (max-width: 340px) {
+    padding: 5rem 0;
+  }
+  @media only screen and (min-width: 700px) {
     top: 30%;
-    padding: 5rem 6rem;
   }
 
   .btn--close-modal {
@@ -59,11 +61,17 @@
   row-gap: 3rem;
 
   &__column {
+    flex: 1 1 auto;
     min-width: 100px;
+    max-width: 80%;
     display: grid;
     grid-template-columns: 1fr 2.8fr;
     align-items: center;
     gap: 1.5rem;
+
+    @media only screen and (max-width: 400px) {
+      max-width: 90%;
+    }
 
     & label {
       font-size: 1.5rem;
