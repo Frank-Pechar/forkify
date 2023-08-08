@@ -151,7 +151,7 @@ const controlAddRecipe = async function (newRecipe) {
     setTimeout(function () {
       addRecipeView._toggleForm();
       location.reload();
-    }, MODAL_CLOSE_SEC * 1000);
+    }, MODAL_CLOSE_SEC * 500);
     window.scroll({ top: 0, left: 0, behavior: 'smooth' });
   } catch (err) {
     console.error('💥', err);
@@ -159,7 +159,7 @@ const controlAddRecipe = async function (newRecipe) {
     // Reload page after displaying error message and scroll to top of page
     setTimeout(function () {
       location.reload();
-    }, MODAL_CLOSE_SEC * 1500);
+    }, MODAL_CLOSE_SEC * 1000);
     window.scroll({ top: 0, left: 0, behavior: 'smooth' });
   }
 };
