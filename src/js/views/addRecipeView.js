@@ -40,6 +40,8 @@ class AddRecipeView extends View {
       e.preventDefault();
       // spread FormData object into an array
       const dataArr = [...new FormData(this)];
+      // reset new recipe form input values
+      document.getElementById('uploadForm').reset();
       // create an object from the array
       const data = Object.fromEntries(dataArr);
       // handler = controller.controlAddRecipe()
