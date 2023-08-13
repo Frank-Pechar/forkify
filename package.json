@@ -2,7 +2,7 @@
   "name": "forkify",
   "version": "1.0.0",
   "description": "Recipe Application",
-  "browserslist": "> 0.5%, last 10 versions, Firefox ESR, not dead",
+  "browserslist": "> 0.5%, last 5 versions, Firefox ESR, not dead",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html --dist-dir ./dist"
