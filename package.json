@@ -19,7 +19,7 @@
     "build:devNotWk": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server",
     "build:dev": "npm-run-all compile:sass prefix:css compress:css build:webpackdev",
     "build:webpackprod": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack --config webpack.config.prod.js",
-    "build:prod": "npm-run-all compile:sass prefix:css compress:css build:webpackprod"
+    "build:prod": "npm-run-all build:css build:webpackprod"
   },
   "devDependencies": {
     "@babel/core": "^7.22.10",
