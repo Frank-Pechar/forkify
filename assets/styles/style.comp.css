@@ -90,7 +90,6 @@ body {
     outline: none; }
 
 .btn--round {
-  z-index: 1000;
   background-image: linear-gradient(to right bottom, #fbdb89, #f48982);
   border-radius: 50%;
   border: none;
