@@ -6,9 +6,6 @@ Exports =
   AJAX - Performs download and upload fetch requests for application
 */
 
-// commented out for webpack
-// import { async } from 'regenerator-runtime';
-
 import { TIMEOUT_SEC } from './config.js';
 
 // timeout function for fetch request

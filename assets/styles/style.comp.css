@@ -106,6 +106,7 @@ body {
     outline: none; }
   .btn--round svg {
     height: 2.5rem;
+    width: 2.5rem;
     fill: #fff; }
 
 .btn--tiny {

@@ -9,6 +9,7 @@ This controller.js module handles:
 */
 // model performs initial state-object processing and loads bookmarks if on local storage
 import * as model from './model.js';
+
 import { MODAL_CLOSE_SEC } from './config.js';
 import recipeView from './views/recipeView.js';
 import searchView from './views/searchView.js';
@@ -16,12 +17,6 @@ import resultsView from './views/resultsView.js';
 import paginationView from './views/paginationView.js';
 import bookmarksView from './views/bookmarksView.js';
 import addRecipeView from './views/addRecipeView.js';
-
-// general polyfilling and polyfilling runtime support for async */
-// commented out for webpack
-// import 'core-js/stable';
-// import 'regenerator-runtime/runtime';
-// import { async } from 'regenerator-runtime';
 
 const searchResults = document.querySelector('.search-results');
 const recipe = document.querySelector('.recipe');
@@ -167,7 +162,6 @@ const controlAddRecipe = async function (newRecipe) {
 
 // A D D   E V E N T   L I S T E N E R S
 // I N I T I A L    E X E C U T I O N    S E Q U E N C E
-// A F T E R   I M P O R T S   A R E   E X E C U T E D
 function init() {
   bookmarksView.addHandlerRender(controlBookmarks);
   recipeView.addHandlerRender(controlRecipes);
