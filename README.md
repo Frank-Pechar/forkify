@@ -36,7 +36,7 @@ View List of Bookmarks
 
 - ES6 Modules
 - MVC - Model/View/Controller Architecture wih Publisher/Subscriber Pattern
-- Webpack for build bundling (Babel for transpiling, core.js/stable for polyfilling)
+- Webpack for build bundling (Babel for transpiling, corejs for polyfilling)
 - Recipe Database API - Query & Update
 - DOM Updating Algorithm - (render only changed DOM Text and Attributes)
 - Pagination of Search Results
